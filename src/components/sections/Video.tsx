@@ -5,7 +5,16 @@ function Video() {
   return (
     <>
       <Section>
-        <VideoStyle></VideoStyle>
+        <VideoStyle>
+          <video
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            poster="/assets/poster.jpg"
+          >
+            <source src="/assets/main.mp4" type="video/mp4" />
+          </video>
+        </VideoStyle>
       </Section>
     </>
   )

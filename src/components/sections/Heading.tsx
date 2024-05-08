@@ -15,7 +15,6 @@ const DAYS = [
 function Heading({ date }: { date: string }) {
   const weddingDate = parseISO(date)
 
-  console.log(weddingDate)
   return (
     <>
       <Section>
