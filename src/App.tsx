@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from '@/styles/App-styled'
 import FullScreenMessage from '@/components/shared/FullScreenMessage'
+import Heading from './components/sections/Heading'
+import Video from './components/sections/Video'
+import { Wedding } from '@/models/wedding'
 
 function App() {
-  const [wedding, setWedding] = useState('')
+  const [wedding, setWedding] = useState<Wedding | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
@@ -36,7 +39,19 @@ function App() {
     return <FullScreenMessage type="error" />
   }
 
-  return <Container>{JSON.stringify(wedding)}</Container>
+  if (wedding === null) {
+    return null
+  }
+
+  const { date } = wedding
+
+  return (
+    <Container>
+      <Heading date={date} />
+      <Video />
+      {JSON.stringify(wedding)}
+    </Container>
+  )
 }
 
 export default App
