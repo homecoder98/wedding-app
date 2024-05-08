@@ -1,31 +1,32 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
-import classNames from 'classnames'
-import styles from './App.module.scss'
-
-const cx = classNames.bind(styles)
+const Container = styled.div`
+  background-color: #ea7664;
+`
 
 function App() {
-  return (
-    <div className={cx('container')}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
+  const [wedding, setWedding] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+
+    fetch('http://localhost:8888/wedding')
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setWedding(data)
+        setLoading(false)
+      })
+  }, [])
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  return <Container>{JSON.stringify(wedding)}</Container>
 }
 
 export default App

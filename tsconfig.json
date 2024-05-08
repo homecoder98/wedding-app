@@ -19,15 +19,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "types": [
-      "node",
-      "testing-library__jest-dom"
-    ],
+    "jsx": "react-jsx"
   },
   "include": [
-    "src",
+    "./src",
     "tsconfig.paths.json",
-    "./**/*"
-  ]
+    "react-app-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "declaration.d.ts"
+  ],
 }
