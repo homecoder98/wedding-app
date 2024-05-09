@@ -1,4 +1,5 @@
 import { SectionStyle, TitleStyle } from '@/styles/SectionStyle'
+import '@/styles/Invitation.css'
 
 function Section({
   children,
