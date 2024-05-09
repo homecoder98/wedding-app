@@ -1,0 +1,45 @@
+.wrap-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.txt-date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.txt-time {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.wrap-calendar {
+    display: flex;
+    justify-content: center;
+}
+
+.rdp-caption {
+    display:none;
+}
+
+.rdp-cell {
+    cursor: default;
+}
+
+.rdp-head_cell {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rdp-day_selected {
+    background-color: red;
+    font-weight: bold;
+    color:#fff;
+}
+.rdp-day_selected:hover {
+    background-color: red;
+}
