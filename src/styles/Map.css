@@ -1,0 +1,37 @@
+.wrap-map {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrap-map span {
+    margin-bottom: 40px;
+}
+
+.map {
+    width: 100%;
+    height:250px
+}
+
+.btn-find-map {
+    border:1px solid #eee;
+    padding: 8px 32px;
+    z-index:2;
+    position: absolute;
+    bottom: 24px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color:#000;
+    text-decoration: none;
+    border-radius: 32px;
+}
+
+.wrap-waytocome {
+    line-height: 36px;
+}
+
+.txt-label{
+    font-weight: bold;
+    margin-top:40px;
+}
